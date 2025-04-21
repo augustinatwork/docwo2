@@ -3,15 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introducing Docwo</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Docwo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: 0.15em solid #fff;
+      white-space: nowrap;
+      animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white }
+    }
+  </style>
 </head>
 <body class="bg-black text-white flex items-center justify-center min-h-screen">
-  <div class="text-center px-6">
-    <h1 class="text-5xl md:text-7xl font-bold mb-6">One more thing.</h1>
-    <p class="text-xl md:text-2xl text-gray-300 mb-12">Introducing <span class="text-white font-semibold">Docwo</span> — revolutionizing hospital appointments with simplicity, speed, and care.</p>
-    <p class="text-gray-500 italic text-sm mb-4">Launching soon in Kerala.</p>
-    <a href="#" class="inline-block bg-white text-black px-6 py-3 rounded-full text-lg font-medium hover:bg-gray-200 transition duration-300">
+  <div class="text-center px-6 max-w-2xl">
+    <h1 class="text-6xl md:text-8xl font-extrabold mb-6 fade-in-up">One more thing.</h1>
+    <p class="text-2xl md:text-3xl text-gray-300 mb-6 fade-in-up typewriter" style="animation-delay: 1s;">
+      Introducing <span class="text-white font-semibold">Docwo</span> – your health, reimagined.
+    </p>
+    <p class="text-gray-500 italic text-sm mb-8 fade-in-up" style="animation-delay: 2.5s;">
+      Launching soon across Kerala.
+    </p>
+    <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300 fade-in-up" style="animation-delay: 3s;">
       Join the Waitlist
     </a>
   </div>
